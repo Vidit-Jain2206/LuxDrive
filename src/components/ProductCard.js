@@ -13,6 +13,7 @@ const ProductCard = (props) => {
           src={props.img}
           alt="pic"
           className="h-[260px] w-full rounded-2xl"
+          loading="lazy"
         />
       </div>
       {/* details */}

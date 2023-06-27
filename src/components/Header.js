@@ -7,6 +7,7 @@ import {
   mobileMenuOff,
 } from "../Features/MobileMenu/MobileMenuSlice";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Header = () => {
   const mobileMenu = useSelector((state) => state.mobileMenu.mode);
@@ -30,7 +31,7 @@ const Header = () => {
                 <li>Home</li>
               </Link>
               <Link
-                to={"/rent"}
+                to={"/rent/SUV"}
                 className="px-[20px] py-[8px] backdrop-blur-[18px] text-sm tracking-[1px] leading-6 font-sans not-italic font-semibold before:w-full before:h-full before:absolute before:top-0 before:left-0 before:border before:border-white before:hover:origin-center before:hover:rotate-180 before:transition before:duration-700 active:text-black"
               >
                 <li>Rent</li>

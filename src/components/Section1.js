@@ -89,13 +89,13 @@ const Section1 = () => {
             <div className="p-2  flex flex-col md:justify-center">
               <div className=" w-[96%] h-[45%] md:h-[50%] ">
                 <Link
-                  to=""
-                  className="text-start w-full h-full flex items-center justify-around border p-4 font-bold bg-black text-white rounded-full"
+                  to="/brand/Toyota"
+                  className="text-start w-full h-full flex items-center justify-evenly border p-4 font-bold bg-black text-white rounded-full"
                 >
                   <span className="text-[10px] md:text-[13px] sm:text-[11px] ">
                     Find a Vehicle
                   </span>
-                  <AiOutlineArrowRight className="text-[10px] sm:text-[11px] md:text-[13px]" />
+                  <AiOutlineArrowRight className="text-[12px] sm:text-[13px] md:text-[15px] hover:translate-x-2 transition duration-300" />
                 </Link>
               </div>
             </div>

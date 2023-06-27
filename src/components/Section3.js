@@ -209,7 +209,6 @@ const Section3 = () => {
       setCars(OffRoad);
     }
   }, [category]);
-  console.log(category);
   return (
     <div className="w-full h-auto mt-[10rem] t-[10rem] bg-[#f5f5f5]">
       <section className="">
@@ -292,7 +291,7 @@ const Section3 = () => {
         </div>
 
         {/* cards */}
-        <div className="mb-[10rem] mt-[4rem] max-w-[1200px] mx-auto grid gap-[33px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-[10rem] mt-[4rem] max-w-[1200px] mx-auto grid gap-[33px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {cars.map((item, id) => {
             return (
               <ProductCard
