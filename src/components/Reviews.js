@@ -38,34 +38,30 @@ const Section6 = () => {
         {/* buttons */}
         <div className="flex flex-row space-x-4 ml-[2rem] lg:ml-0">
           <button
+            onClick={() => {
+              if (index === 0) return 0;
+              setIndex(index - 1);
+            }}
             className={`w-[50px] h-[50px] lg:w-[64px] lg:h-[64px]  rounded-full   flex justify-center items-center   ${
               index === 0
                 ? "text-gray-300 border-2 border-gray-300"
                 : "border-2 border-black text-black focus:border-black focus:border-2 focus:bg-black focus:text-white"
             }`}
           >
-            <AiOutlineArrowLeft
-              className="w-[20px] h-[20px] lg:h-[24px] lg:w-[24px]  "
-              onClick={() => {
-                if (index === 0) return 0;
-                setIndex(index - 1);
-              }}
-            />
+            <AiOutlineArrowLeft className="w-[20px] h-[20px] lg:h-[24px] lg:w-[24px]  " />
           </button>
           <button
+            onClick={() => {
+              if (index === reviews.length - 1) return reviews.length - 1;
+              setIndex(index + 1);
+            }}
             className={`w-[50px] h-[50px] lg:w-[64px] lg:h-[64px] rounded-full  flex justify-center items-center   ${
               index === reviews.length - 1
                 ? "text-gray-300 border-2 border-gray-400"
                 : "border-black border-2 text-black focus:border-black focus:border-2 focus:bg-black focus:text-white "
             }`}
           >
-            <AiOutlineArrowRight
-              className=" w-[20px] h-[20px] lg:h-[24px] lg:w-[24px] "
-              onClick={() => {
-                if (index === reviews.length - 1) return reviews.length - 1;
-                setIndex(index + 1);
-              }}
-            />
+            <AiOutlineArrowRight className=" w-[20px] h-[20px] lg:h-[24px] lg:w-[24px] " />
           </button>
         </div>
       </div>

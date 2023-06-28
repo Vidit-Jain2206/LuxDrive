@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 
 const SideNavbar = () => {
   const mobileMenu = useSelector((state) => state.mobileMenu.mode);
+
+  function handleScroll() {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
   return (
     <main
       className={`absolute top-[64px] w-full h-[270px] left-0 z-50 md:hidden`}
@@ -21,10 +29,10 @@ const SideNavbar = () => {
             <Link to="/rent/SUV">Rent</Link>
           </li>
           <li className="text-center text-[20px] hover:underline">
-            <Link to="/about">About</Link>
+            <Link>Testimonials</Link>
           </li>
           <li className="text-center text-[20px] hover:underline">
-            <Link to="/contact">Contact Us</Link>
+            <Link onClick={handleScroll}>Contact</Link>
           </li>
         </ul>
       </div>

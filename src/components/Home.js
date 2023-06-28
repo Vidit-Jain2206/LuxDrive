@@ -1,20 +1,20 @@
 import React from "react";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Section4 from "./Section4";
-import Section5 from "./Section5";
-import Section6 from "./Section6";
+import CoverPage from "./CoverPage";
+import Category from "./Category";
+import CarCollection from "./CarCollection";
+import Working from "./Working";
+import ServicesAndBenefits from "./Services&Benefits";
+import Reviews from "./Reviews";
 
 const Home = () => {
   return (
     <div className="w-screen flex flex-col justify-center items-center ">
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
+      <CoverPage />
+      <Category />
+      <CarCollection />
+      <Working />
+      <ServicesAndBenefits />
+      <Reviews />
     </div>
   );
 };
