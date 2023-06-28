@@ -8,18 +8,19 @@ import { TiTick } from "react-icons/ti";
 
 const ProductDetails = () => {
   const params = useParams();
-  const [carDetail, setCardDetail] = useState();
+
+  const [carDetail, setCardDetail] = useState({});
   useEffect(() => {
     fetchCarDetails();
     function fetchCarDetails() {
-      cars.forEach((car) => {
-        if (car.id === params.code) {
-          setCardDetail(car);
+      for (let index = 0; index < cars.length; index++) {
+        if (cars[index].id === params.code) {
+          setCardDetail(cars[index]);
+          return;
         }
-      });
+      }
     }
-    console.log(carDetail);
-  }, [params.code]);
+  }, [carDetail, params.code]);
 
   return (
     <main>

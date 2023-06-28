@@ -12,7 +12,7 @@ import Footer from "./Footer";
 const Header = () => {
   const mobileMenu = useSelector((state) => state.mobileMenu.mode);
   const dispatch = useDispatch();
-  console.log(mobileMenu);
+
   return (
     <div className="h-16 bg-black text-white">
       <header className="h-full flex flex-wrap justify-between items-center  mx-auto my-auto max-w-6xl">
@@ -55,15 +55,15 @@ const Header = () => {
 
         {/* sideNav Bar Starts */}
         <div className="md:hidden flex justify-center text-center">
-          {!mobileMenu ? (
+          {mobileMenu ? (
             <CgClose
               className="text-xl w-[23px] h-full  text-white"
-              onClick={() => dispatch(mobileMenuOn())}
+              onClick={() => dispatch(mobileMenuOff())}
             />
           ) : (
             <SlMenu
               className="text-xl w-[23px] h-full  text-white"
-              onClick={() => dispatch(mobileMenuOff())}
+              onClick={() => dispatch(mobileMenuOn())}
             />
           )}
         </div>
