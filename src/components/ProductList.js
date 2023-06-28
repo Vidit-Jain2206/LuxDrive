@@ -19,9 +19,8 @@ const ProductList = () => {
         <ul className=" mb-10 mt-10 grid gap-[10px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {cars.map((item, index) => {
             return (
-              <li>
+              <li key={index}>
                 <ProductCard
-                  key={index}
                   img={item.img}
                   title={item.title}
                   price={item.price}

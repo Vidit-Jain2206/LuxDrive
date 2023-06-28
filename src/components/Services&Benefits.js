@@ -1,4 +1,7 @@
 import React from "react";
+import Quality from "../assets/qualityChoice.png";
+import Price from "../assets/price.png";
+import OnlineBooking from "../assets/onlineBooking.png";
 
 const Section5 = () => {
   return (
@@ -20,7 +23,7 @@ const Section5 = () => {
         <div className="flex flex-col w-full h-[178px] max-w-[370px] items-center justify-center ">
           {/* pic */}
           <img
-            src="../assets/qualityChoice.png"
+            src={Quality}
             alt=""
             className="w-[48px] h-[48px] border-[8px] border-[#ffffffda] rounded-3xl"
           />
@@ -37,9 +40,9 @@ const Section5 = () => {
         <div className="flex flex-col w-full h-[178px] max-w-[370px] items-center justify-center ">
           {/* pic */}
           <img
-            src="../assets/price.png"
+            src={Price}
             alt=""
-            className="w-[48px] h-[48px] border-[8px] border-[#ffffffda] rounded-3xl"
+            className="w-[48px] h-[48px] border-[8px] bg-[#ffffffda] border-[#ffffffda] rounded-3xl"
           />
           {/* title */}
           <h2 className=" font-semibold text-[20px] text-center leading-8 mt-[1rem] text-white not-italic tracking-wider">
@@ -54,7 +57,7 @@ const Section5 = () => {
         <div className="flex flex-col w-full  h-[178px] max-w-[370px] items-center justify-center ">
           {/* pic */}
           <img
-            src="../assets/onlineBooking.png"
+            src={OnlineBooking}
             alt=""
             className="w-[48px] h-[48px] border-[8px] border-[#ffffffda] rounded-3xl"
           />

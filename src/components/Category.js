@@ -2,107 +2,9 @@ import React from "react";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 
+import { brands } from "../utils/Brand";
+import { bodyType } from "../utils/BodyType";
 const Section2 = () => {
-  const brands = [
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "Toyota",
-      pic: "../assets/toyota.png",
-    },
-  ];
-  const bodyType = [
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-    {
-      title: "SUV",
-      pic: "../assets/toyota.png",
-    },
-  ];
   return (
     <div className="w-full flex flex-col mt-[2rem]">
       <div className="mx-auto my-auto flex flex-col max-w-6xl">
@@ -110,9 +12,9 @@ const Section2 = () => {
         <div className="w-[100%] h-auto mt-[4rem]">
           <h1 className="font-bold text-[20px]">Rent By Brands</h1>
           <div className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-2 gap-x-2 mt-10">
-            {brands.map((item) => {
+            {brands.map((item, index) => {
               return (
-                <Link to={`/brand/${item.title}`}>
+                <Link to={`/brand/${item.title}`} key={index}>
                   <Card title={item.title} pic={item.pic} />
                 </Link>
               );
@@ -123,9 +25,9 @@ const Section2 = () => {
         <div className="w-[100%] h-auto mt-20">
           <h1 className="font-bold text-[20px]">Rent By Body Type</h1>
           <div className="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-2 gap-x-2 mt-10">
-            {bodyType.map((item) => {
+            {bodyType.map((item, index) => {
               return (
-                <Link to={`/bodytype/${item.title}`}>
+                <Link to={`/bodytype/${item.title}`} key={index}>
                   <Card title={item.title} pic={item.pic} />
                 </Link>
               );

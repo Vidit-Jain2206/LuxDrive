@@ -29,7 +29,7 @@ const SideNavbar = () => {
             <Link to="/rent/SUV">Rent</Link>
           </li>
           <li className="text-center text-[20px] hover:underline">
-            <Link>Testimonials</Link>
+            <Link onClick={handleScroll}>Testimonials</Link>
           </li>
           <li className="text-center text-[20px] hover:underline">
             <Link onClick={handleScroll}>Contact</Link>

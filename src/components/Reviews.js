@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReviewCard from "./ReviewCard";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import pic from "../assets/Ellipse 13.png";
 
 const Section6 = () => {
   const [index, setIndex] = useState(0);
@@ -10,21 +11,21 @@ const Section6 = () => {
       review:
         "“I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.”",
       name: "Lokman Hussain",
-      pic: "",
+
       place: "Texas",
     },
     {
       review:
-        "“I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.”",
+        "“Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsam aperiam officiis omnis praesentium. Repellendus dicta ducimus, aliquid voluptatibus asperiores magni iste? Delectus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem repudiandae dolor dolore mollitia sed, magni ipsam esse dignissimos accusantium, consequuntur alias, ratione quaerat?”",
       name: "Vidit Jain",
-      pic: "",
+
       place: "India",
     },
     {
       review:
         "“I was really impressed with the level of service I received from this car rental company. The process was smooth and easy, and the car I rented was in excellent condition. The staff was friendly and helpful, and I felt well taken care of throughout my rental period. I would definitely recommend this company to anyone looking for a premium car rental experience.”",
       name: "Abhi ",
-      pic: "",
+
       place: "Germany",
     },
   ];
@@ -70,7 +71,7 @@ const Section6 = () => {
       <div className="w-full ">
         <ReviewCard
           review={reviews[index].review}
-          pic={reviews[index].pic}
+          pic={pic}
           place={reviews[index].place}
           name={reviews[index].name}
         />

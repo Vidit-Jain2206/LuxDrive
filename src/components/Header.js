@@ -12,13 +12,15 @@ const Header = () => {
   const mobileMenu = useSelector((state) => state.mobileMenu.mode);
   const dispatch = useDispatch();
 
-  function handleScroll() {
-    window.scroll({
-      top: document.body.offsetHeight,
-      left: 0,
-      behavior: "smooth",
-    });
-  }
+  const handleScroll = () => {
+    setTimeout(() => {
+      window.scroll({
+        top: document.body.offsetHeight,
+        left: 0,
+        behavior: "smooth",
+      });
+    }, 300);
+  };
   return (
     <div className="h-16 bg-black text-white">
       <header className="h-full flex flex-wrap justify-between items-center  mx-auto my-auto max-w-6xl">
@@ -43,6 +45,7 @@ const Header = () => {
                 <li>Rent</li>
               </Link>
               <Link
+                to={"/"}
                 onClick={handleScroll}
                 className="px-[20px] py-[8px] backdrop-blur-[18px] text-sm tracking-[1px] leading-6 font-sans not-italic font-semibold before:w-full before:h-full before:absolute before:top-0 before:left-0 before:border before:border-white before:hover:origin-center before:hover:rotate-180 before:transition before:duration-700 active:text-black"
               >

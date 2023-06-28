@@ -11,12 +11,8 @@ const ReviewCard = ({ review, name, place, pic }) => {
       </div>
       {/* details */}
 
-      <div className="w-[320px] mt-[4rem] h-[80px] flex flex-row space-x-8">
-        <img
-          src={pic}
-          alt="pic"
-          className="h-full w-[80px] rounded-full shadow-md"
-        />
+      <div className="w-[320px] mt-[4rem] h-[80px]  flex flex-row space-x-8">
+        <img src={pic} alt="pic" className="h-full rounded-full" />
 
         <div className="flex flex-col h-full items-start ">
           <h3 className=" font-bold text-[24px] leading-6 tracking-tight text-black">
